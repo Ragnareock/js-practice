@@ -1,0 +1,64 @@
+.hero {
+  background-color: $footerBackgroundColor;
+  text-align: center;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  max-width: 1600px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg-mob.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg-mob.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-mob@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-mob@2x.webp);
+  }
+  @include tablet {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-tab.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-tab.webp);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-tab@2x.jpg);
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-tab@2x.webp);
+    }
+  }
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-desk.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-desk.webp);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-desk@x2.jpg);
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-desk@x2.webp);
+    }
+  }
+  &__title {
+    color: $backgroundColor;
+    font-weight: $blackWeight;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: $largeLetterSpacing;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 30px;
+    @include desktop {
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+}

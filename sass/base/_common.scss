@@ -1,0 +1,34 @@
+body {
+  background-color: $backgroundColor;
+  color: $primaryTextColor;
+  font-family: $primaryFont;
+  letter-spacing: $mediumLetterSpacing;
+  font-size: 14px;
+  line-height: 1.71;
+}
+header {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $borderHeaderColor;
+}
+.visually_hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.no-scroll {
+  overflow: hidden;
+}
+/* border-bottom: 1px solid #ececec; */

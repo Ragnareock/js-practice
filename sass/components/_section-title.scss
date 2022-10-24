@@ -1,0 +1,17 @@
+.section_title {
+  font-weight: $boldWeight;
+  text-align: center;
+  letter-spacing: $mediumLetterSpacing;
+  color: $titleTextColor;
+  margin-top: 0;
+  @media screen and (max-width: 1199px) {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+}
