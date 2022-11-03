@@ -167,3 +167,218 @@
 // const userName = prompt('Your name');
 // const greet = `Hello ${userName || 'anonimus'}`;
 // console.log(greet);
+
+// розгалуження, умова
+// const num = 12;
+// if (num > 8) {
+//   console.log('Ok');
+// }
+
+// перевірте з якої букви рядок
+// const str = 'abcd';
+// if (str[0] === 'a') {
+//   console.log('Yes');
+// } else {
+//   console.log('No');
+// }
+
+// const str = 'abcd';
+// if (str.startsWith('a')) {
+//   console.log('Yes');
+// } else {
+//   console.log('No');
+// }
+
+// число дорівнює
+// const userNumber = prompt('You number');
+// if (userNumber === '69') {
+//   console.log('Yes');
+// } else {
+//   console.log('No');
+// }
+
+// у яку чверть години потрапляє число
+// const min = 69;
+// if (min >= 0 && min < 15) {
+//   console.log('перша чверть');
+// } else if (min >= 15 && min < 30) {
+//   console.log('друга чверть');
+// } else if (min >= 30 && min < 45) {
+//   console.log('третя чверть');
+// } else if (min >= 45 && min < 60) {
+//   console.log('четверта чверть');
+// } else {
+//   console.log('некоректна кількість хвилин');
+// }
+
+// чи вірна відповідь в імпуті
+// const userImput = prompt('яка офіційна назва JavaScript?').toLowerCase();
+// if (userImput === 'ecmacript') {
+//   console.log('Yes');
+// } else {
+//   console.log('No');
+// }
+
+// отримує число або більше або менше нуля
+// const userNumber = Number(prompt('введіть число'));
+// if (userNumber > 0) {
+//   console.log(1);
+// } else if (userNumber < 0) {
+//   console.log(-1);
+// } else {
+//   console.log(0);
+// }
+
+// switch перевірка однакових даних в умові на строгу рівність
+// const num = 10;
+// switch (num) {
+//   case 3: {
+//     console.log('You number');
+//     break;
+//   }
+//   case 10: {
+//     console.log('You number');
+//     break;
+//   }
+//   case 8: {
+//     console.log('You number');
+//     break;
+//   }
+//   default: {
+//     console.log('нічого не підійшло Ярік не тупи');
+//   }
+// }
+
+// Переписати код за допомогою однієї конструкції switch
+
+// const number = Number(prompt('введіть число між 0 та 3'));
+
+// if (number === 0) {
+//   alert('ви ввели число 0');
+// } else if (number === 1) {
+//   alert('ви ввели число 1');
+// } else if (number === 2 || number === 3) {
+//   alert('ви ввели число 2 а може і 3');
+// } else {
+//   alert('якесь інше число');
+// }
+
+// switch (number) {
+//   case 0: {
+//     alert('ви ввели число 0');
+//     break;
+//   }
+//   case 1: {
+//     alert('ви ввели число 1');
+//     break;
+//   }
+//   case 2:
+//   case 3: {
+//     alert('ви ввели число 2 а може і 3');
+//     break;
+//   }
+//   default: {
+//     alert('якесь інше число');
+//   }
+// }
+
+// переписати з if на тернарний оператор
+// const a = 4;
+// const b = 1;
+// const result = a + b < 4 ? 'замало' : 'забагато';
+// console.log(result);
+
+// const login = 'співробітник';
+// const message =
+//   login === 'співробітник'
+//     ? 'привіт'
+//     : login === 'директор'
+//     ? 'вітаю'
+//     : login === ''
+//     ? 'немає логіну'
+//     : '';
+// console.log(message);
+
+// let iterator = 0;
+// while (iterator < 10) {
+//   console.log(iterator);
+//   iterator = iterator + 1;
+// }
+
+// знайдіть суми чисел від 1 до 100
+// let iterator = 1;
+// let result = 0;
+// while (iterator <= 100) {
+//   result += iterator;
+//   iterator += 1;
+//   console.log(result);
+// }
+
+// 1000 ділити на 2 стільки разів поки не стане менше 50б скільки це вийдеб та скільки ітерацій
+// let n = 1000;
+// let num = 0;
+
+// while (n / 2 >= 50) {
+//   num += 1;
+//   n /= 2;
+// }
+// console.log(num);
+// console.log(n);
+
+// do while тіло циклу гарантовано виконається навіть якщо брехня
+// do {
+//   console.log('do?');
+// } while (false);
+
+// ввести число більше 100
+// let number = Number(prompt('введіть більше 100'));
+// while (number <= 100) {
+//   number = Number(prompt('введіть більше 100'));
+// }
+// console.log(number);
+
+// do {
+//   number = Number(prompt('введіть більше 100'));
+// } while (number <= 100);
+// console.log(number);
+
+// For
+// for (let i = 0; i < 10; i += 1) {
+//   console.log(i);
+// }
+
+// вивести парні числа від 2 до 10
+// for (let i = 2; i <= 10; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//   }
+// }
+
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log('FizzBuzz');
+//   } else if (i % 3 === 0) {
+//     console.log('Fizz');
+//   } else if (i % 5 === 0) {
+//     console.log('Buzz');
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+// for (let i = 1; i <= 100; i++) {
+//   let str = '';
+
+//   if (i % 3 === 0) {
+//     str += 'Fizz';
+//   }
+//   if (i % 5 === 0) {
+//     str += 'Buzz';
+//   }
+//   console.log(str || i);
+// }
+
+for (let i = 0, star = '*'; i < 7; i++) {
+  console.log(star);
+  star += '*';
+}
