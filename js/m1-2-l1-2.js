@@ -1,8 +1,8 @@
-// console.log('sukanahuiblyat');
+// console.log('');
 
 // let num = 1488;
 // console.log(num);
-// let str = 'ebat';
+// let str = 'Hi';
 // console.log(str);
 // num = 69;
 // console.log(num);
