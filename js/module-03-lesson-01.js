@@ -130,6 +130,41 @@
 // }
 
 // console.log(total);
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
+
+// for (const key in book) {
+//   // Ключ
+//   console.log(key);
+//   // Значення властивості з таким ключем
+//   console.log(book[key]);
+// }
+
+
+
+// // const book = {
+// //   title: "The Last Kingdom",
+// //   author: "Bernard Cornwell",
+// //   genres: ["historical prose", "adventure"],
+// //   rating: 8.38,
+// // };
+
+// // for (const key in book) {
+// //   // Якщо це власна властивість - виконуємо тіло if
+// //   if (book.hasOwnProperty(key)) {
+// //     console.log(key);
+// //     // console.log(book[key]);
+// //   }
+
+//   // Якщо це невласна властивість - нічого не робимо
+// }
+
+
 /*
 ? Напишіть ф-цію calcTotalPrice(stones, stoneName), яка приймає масив об'єктів та рядок з назвою каменю.
 ? Ф-ція рахує і повертає загальну вартість каміння з таким ім'ям.
@@ -211,6 +246,21 @@
   
   // console.log(getAllTitlesOfFilms(filmoteka));
   
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+
+// const keys = Object.keys(apartment);
+
+// for (const key of keys) {
+//   values.push(apartment[key])
+// }
+// console.log(values);
+
+
   //? Напишіть функцію findFilmByName(films, filmTitle), яка шукає фільм за назвою.
   // const findFilmByName = function (films, filmTitle) {
   //   // 1 Варіант
@@ -269,11 +319,11 @@
 //? Отримайте суму зарплат усіх працівників
 
 // 1 Варіант через цикл for...in
-// const salaries = {
-//   John: 100,
-//   Ann: 160,
-//   Pete: 130,
-// };
+const salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
+};
 
 // const newSalaries = Object.create(salaries);
 // newSalaries.Oleksii = 100;
@@ -301,17 +351,34 @@
 //   Pete: 130,
 // };
 
-// const salariesKeys = Object.keys(salaries);
-// let total = 0;
+const salariesKeys = Object.keys(salaries);
+let total = 0;
 
-// for (const key of salariesKeys) {
-//   //   console.log(key);
-//   //   console.log(salaries[key]);
+for (const key of salariesKeys) {
+    console.log(key);
+    console.log(salaries[key]);
 
-//   total += salaries[key];
-// }
+  total += salaries[key];
+}
 
-// console.log(total);
+console.log(total);
+
+
+
+
+
+
+function countProps(object) {
+
+  const keys = Object.keys(object);
+  let propCount = 0;
+  for (const key of keys) {
+    propCount += key;
+
+    return propCount;
+  }
+
+}
 
 // 3 Варіант Object.values() + for...of
 // const salaries = {
@@ -380,3 +447,5 @@
 // console.log(filmDuna);
 
 // console.log(filmDuna.isAdult());
+
+
