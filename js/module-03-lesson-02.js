@@ -367,3 +367,79 @@
 //   userEmail: 'apjez@eh.aq',
 //   userPhoneNumber: '(096) 35-21-476',
 // });
+
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+// console.log(bestScore);
+
+// const defaultSettings = {
+//   theme: "light",
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = { ...defaultSettings, ...overrideSettings };
+
+// console.log(finalSettings);
+
+
+// function makeTask(data) {
+//     const completed = false;
+//     const category = "General";
+//     const priority = "Normal";
+//     // Change code below this line
+//     const copyOfTask = { category, priority, ...data, text };
+//     return copyOfTask;
+//     // Change code above this line
+
+// }
+
+
+// // ✅ Логічно і синтаксично згруповані сутності
+// const bookShelf = {
+//     books: ["Останнє королівство", "Страж снів"],
+//     // Це метод об'єкта
+//     getBooks() {
+//         console.log("Цей метод буде повертати всі книги - властивість books");
+//     },
+//     // Це метод об'єкта
+//     addBook(bookName) {
+//         console.log("Цей метод буде додавати нову книгу у властивість books");
+//     },
+// };
+
+// // Виклики методів
+// bookShelf.getBooks();
+// // bookShelf.addBook("Нова книга");
+
+
+// const atTheOldToad = {
+//     potions: [
+//         { name: "Speed potion", price: 460 },
+//         { name: "Dragon breath", price: 780 },
+//         { name: "Stone skin", price: 520 },
+//     ],
+
+//     getPotions() {
+//         return this.potions;
+//     }
+// }
+// console.log(atTheOldToad.potions);
+
+
+
+
