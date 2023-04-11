@@ -739,37 +739,283 @@
 // };
 // atTheOldToad.updatePotionName("Dragon breath", "Polymorth");
 
-const atTheOldToad = {
-  potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Dragon breath", price: 780 },
-    { name: "Stone skin", price: 520 },
-  ],
-  getPotions() {
-    return this.potions;
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     for (const potion of this.potions) {
+//       if (potion.name === newPotion.name) {
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//       }
+//     }
+//     this.potions.push(newPotion);
+//   },
+//   removePotion(potionName) {
+//     for (let i = 0; i < this.potions.length; i++){
+//       if (potionName === this.potions[i].name) {
+//         this.potions.splice(i, 1);
+//       }
+//     }
+//     return `Potion ${potionName} is not in inventory!`;
+//   },
+//   updatePotionName(oldName, newName) {
+//     for (let i = 0; i < this.potions.length; i++) {
+//       if (oldName === this.potions[i].name) {
+//         this.potions[i].name = newName;
+//       }
+//     }
+//     return `Potion ${oldName} is not in inventory!`;
+//   },
+// };
+
+// SPLICE
+
+// function makePizza() {
+//   return "Your pizza is being prepared, please wait.";
+// }
+// const result = makePizza();
+// const pointer = makePizza;
+// console.log(makePizza());
+// console.log(makePizza);
+
+// function deliverPizza(pizzaName) {
+//   return `Delivering ${pizzaName} pizza.`;
+// }
+// function makePizza(pizzaName) {
+//   return `Pizza ${pizzaName} is being prepared, please wait...`;
+// }
+// function makeMessage(pizzaName, callback) {
+//   console.log(callback);
+//   return callback(pizzaName);
+// }
+// makeMessage("Royal Grand", makePizza);
+
+// function makePizza(pizzaName, callback) {
+//   console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+//   callback(pizzaName);
+// }
+// makePizza("Royal Grand", function deliverPizza(pizzaName) {
+//   console.log(`Delivering pizza ${pizzaName}.`);
+// });
+// makePizza("Ultracheese", function eatPizza(pizzaName) {
+//   console.log(`Eating pizza ${pizzaName}.`);
+// });
+
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, onSuccess, onError) {
+//     for (i = 0; i < this.pizzas.length; i++) {
+//       if (pizzaName === this.pizzas[i]) {
+//         return onSuccess(pizzaName);
+//       }
+//     }
+//     return onError(`There is no pizza with a name ${pizzaName} in the assortment.`);
+//   },
+// };
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+// pizzaPalace.order("Smoked", makePizza, onOrderError);
+// pizzaPalace.order("Four meats", makePizza, onOrderError);
+// pizzaPalace.order("Big Mike", makePizza, onOrderError);
+// pizzaPalace.order("Vienna", makePizza, onOrderError);
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   orderedItems.forEach(function (number, index) {
+//     return totalPrice += number;
+//   });
+//   return totalPrice;
+// }
+
+
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+//   numbers.forEach(function (number, index) {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//     console.log(filteredNumbers);
+//   });
+//   return filteredNumbers;
+// }
+// filterArray([1, 2, 3, 4, 5], 3);
+
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   firstArray.forEach(function (number) {
+//     if (secondArray.includes(number)) {
+//       commonElements.push(number);
+//       console.log(commonElements);
+//     }
+//   });
+//   return commonElements;
+// }
+// getCommonElements([1, 2, 3], [2, 1, 17, 19]);
+
+// const calculateTotalPrice = (quantity, pricePerItem) => {
+//   return quantity * pricePerItem;
+// }
+// calculateTotalPrice(5, 100);
+
+// const calculateTotalPrice = (quantity, pricePerItem) => quantity * pricePerItem;
+// calculateTotalPrice(8, 60);
+
+// const calculateTotalPrice = orderedItems => {
+//   let totalPrice = 0;
+//   orderedItems.forEach(item => totalPrice += item);
+//   return totalPrice;
+// }
+
+
+// const filterArray = (numbers, value) => {
+//   const filteredNumbers = [];
+//   numbers.forEach((number) => {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   });
+//   return filteredNumbers;
+// }
+// filterArray([12, 24, 8, 41, 76], 38);
+
+// const getCommonElements = (firstArray, secondArray) => {
+//   const commonElements = [];
+//   firstArray.forEach((element) => {
+//     if (secondArray.includes(element)) {
+//       commonElements.push(element);
+//     }
+//   });
+//   return commonElements;
+// }
+// getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]);
+
+// function changeEven(numbers, value) {
+//   const newArray = [];
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] % 2 === 0) {
+//       newArray.push(numbers[i] + value);
+//       continue;
+//     }
+//     newArray.push(numbers[i]);
+//   }
+//   return newArray;
+// }
+// changeEven([2, 8, 3, 7, 4, 6], 10);
+
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+// const planetsLengths = planets.map(planet => planet.length);
+// console.log(planetsLengths);
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// const titles = books.map(book => book.title);
+// console.log(titles);
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism"],
+//   },
+// ];
+// const genres = books.flatMap(book => book.genres);
+// console.log(genres);
+
+// const getUserNames = users => {
+//   return users.map(user => user.name);
+// };
+
+// const getUserEmails = users => {
+//   return users.map(user => user.email);
+// };
+
+// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// const evenNumbers = numbers.filter(number => { return (number % 2) === 0 });
+// const oddNumbers = numbers.filter(number => { return (number % 2) !== 0 });
+// console.log(evenNumbers);
+// console.log(oddNumbers);
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction", "mysticism"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism", "adventure"],
+//   },
+// ];
+// const allGenres = books.flatMap(book => book.genres);
+// console.log(allGenres);
+// const uniqueGenres = allGenres.filter(
+//   (genre, index, array) => array.indexOf(genre) === index
+// );
+// console.log(uniqueGenres);
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
   },
-  addPotion(newPotion) {
-    for (const potion of this.potions) {
-      if (potion.name === newPotion.name) {
-        return `Error! Potion ${newPotion.name} is already in your inventory!`;
-      }
-    }
-    this.potions.push(newPotion);
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
   },
-  removePotion(potionName) {
-    for (let i = 0; i < this.potions.length; i++){
-      if (potionName === this.potions[i].name) {
-        this.potions.splice(i, 1);
-      }
-    }
-    return `Potion ${potionName} is not in inventory!`;
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
   },
-  updatePotionName(oldName, newName) {
-    for (let i = 0; i < this.potions.length; i++) {
-      if (oldName === this.potions[i].name) {
-        this.potions[i].name = newName;
-      }
-    }
-    return `Potion ${oldName} is not in inventory!`;
-  },
-};
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+];
+const MIN_RATING = 8;
+const AUTHOR = "Bernard Cornwell";
+const topRatedBooks = books;
+const booksByAuthor = books;
