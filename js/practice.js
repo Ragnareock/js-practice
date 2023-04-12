@@ -996,26 +996,115 @@
 // );
 // console.log(uniqueGenres);
 
-const books = [
-  {
-    title: "The Last Kingdom",
-    author: "Bernard Cornwell",
-    rating: 8.38,
-  },
-  {
-    title: "Beside Still Waters",
-    author: "Robert Sheckley",
-    rating: 8.51,
-  },
-  {
-    title: "The Dream of a Ridiculous Man",
-    author: "Fyodor Dostoevsky",
-    rating: 7.75,
-  },
-  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
-  { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
-];
-const MIN_RATING = 8;
-const AUTHOR = "Bernard Cornwell";
-const topRatedBooks = books;
-const booksByAuthor = books;
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// const MIN_RATING = 8;
+// const AUTHOR = "Bernard Cornwell";
+// const topRatedBooks = books.filter(book => book.rating >= MIN_RATING);
+// console.log(topRatedBooks);
+// const booksByAuthor = books.filter(book => book.author === AUTHOR);
+// console.log(booksByAuthor);
+
+// const getUsersWithEyeColor = (users, color) => {
+//   return users.filter(user => user.eyeColor === color)
+// };
+
+// const getUsersWithAge = (users, minAge, maxAge) => {
+//   return users.filter(user => user.age >= minAge && user.age <= maxAge)
+// };
+
+// const getUsersWithFriend = (users, friendName) => {
+//   return users.filter(user => user.friends.includes(friendName))
+// };
+
+// const getFriends = (users) => {
+//   const allFriendsArray = users.flatMap(user => user.friends);
+//   return allFriendsArray.filter(
+//     (friend, index, array) => array.indexOf(friend) === index
+//   );
+// };
+
+// const getActiveUsers = (users) => {
+//   return users.filter(user => user.isActive);
+// };
+
+// const getInactiveUsers = (users) => {
+//   return users.filter(user => user.isActive === false)
+// };
+
+// const getInactiveUsers = (users) => {
+//   return users.filter(user => !user.isActive)
+// };
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+// ];
+// const BOOK_TITLE = 'The Dream of a Ridiculous Man';
+// const AUTHOR = 'Robert Sheckley';
+// const bookWithTitle = books.find(option => option.title === BOOK_TITLE);
+// const bookByAuthor = books.find(option => option.author === AUTHOR);
+
+// const getUserWithEmail = (users, email) => {
+//   return users.find(option => option.email === email)
+// };
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// const eachElementInFirstIsEven = firstArray.every(value => value % 2 === 0);
+// const eachElementInFirstIsOdd = firstArray.every(value => value % 2 !== 0);
+// const eachElementInSecondIsEven = secondArray.every(value => value % 2 === 0);
+// const eachElementInSecondIsOdd = secondArray.every(value => value % 2 !== 0);
+// const eachElementInThirdIsEven = thirdArray.every(value => value % 2 === 0);
+// const eachElementInThirdIsOdd = thirdArray.every(value => value % 2 !== 0);
+
+// const isEveryUserActive = (users) => {
+//   return users.every(value => value.isActive)
+// };
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// const anyElementInFirstIsEven = firstArray.some(value => value % 2 === 0);
+// const anyElementInFirstIsOdd = firstArray.some(value => value % 2 !== 0);
+// const anyElementInSecondIsEven = secondArray.some(value => value % 2 === 0);
+// const anyElementInSecondIsOdd = secondArray.some(value => value % 2 !== 0);
+// const anyElementInThirdIsEven = thirdArray.some(value => value % 2 === 0);
+// const anyElementInThirdIsOdd = thirdArray.some(value => value % 2 !== 0);
+
+// const isAnyUserActive = users => {
+//   return users.some(value => value.isActive)
+// };
+
