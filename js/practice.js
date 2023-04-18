@@ -1305,71 +1305,158 @@
 //   .sort((firstBook, secondBook) => firstBook.localeCompare(secondBook));
 // console.log(names);
 
-const users = [
-  {
-    name: "Moore Hensley",
-    email: "moorehensley@indexia.com",
-    eyeColor: "blue",
-    friends: ["Sharron Pace"],
-    isActive: false,
-    balance: 2811,
-    gender: "male"
-  },
-  {
-    name: "Sharlene Bush",
-    email: "sharlenebush@tubesys.com",
-    eyeColor: "blue",
-    friends: ["Briana Decker", "Sharron Pace"],
-    isActive: true,
-    balance: 3821,
-    gender: "female"
-  },
-  {
-    name: "Ross Vazquez",
-    email: "rossvazquez@xinware.com",
-    eyeColor: "green",
-    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-    isActive: false,
-    balance: 3793,
-    gender: "male"
-  },
-  {
-    name: "Elma Head",
-    email: "elmahead@omatom.com",
-    eyeColor: "green",
-    friends: ["Goldie Gentry", "Aisha Tran"],
-    isActive: true,
-    balance: 2278,
-    gender: "female"
-  },
-  {
-    name: "Carey Barr",
-    email: "careybarr@nurali.com",
-    eyeColor: "blue",
-    friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
-    isActive: true,
-    balance: 3951,
-    gender: "male"
-  },
-  {
-    name: "Blackburn Dotson",
-    email: "blackburndotson@furnigeer.com",
-    eyeColor: "brown",
-    friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
-    isActive: false,
-    balance: 1498,
-    gender: "male"
-  },
-  {
-    name: "Sheree Anthony",
-    email: "shereeanthony@kog.com",
-    eyeColor: "brown",
-    friends: ["Goldie Gentry", "Briana Decker"],
-    isActive: true,
-    balance: 2764,
-    gender: "female"
-  }
-]
-const getNamesSortedByFriendCount = users => {
+// const users = [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female"
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male"
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female"
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male"
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female"
+//   }
+// ]
+// const getNamesSortedByFriendCount = users => {
+//   return [...users]
+//     .sort((firstUser, secondUser) => firstUser.friends.length - secondUser.friends.length)
+//     .map(user => user.name);
+// };
+// console.log(users);
 
-};
+// const getSortedFriends = users => {
+//   return users
+//     .flatMap(user => user.friends)
+//     .filter(
+//       (friend, index, array) => array.indexOf(friend) === index
+//     )
+//     .sort((firstFriend, secondFriend) => firstFriend.localeCompare(secondFriend))
+// };
+
+// const getTotalBalanceByGender = (users, gender) => {
+//   return users
+//     .filter(user => user.gender === gender)
+//     .reduce((total, user) => total + user.balance, 0)
+// };
+
+// const pizzaPalace = {
+//   pizzas: ["Supercheese", "Smoked", "Four meats"],
+//   checkPizza(pizzaName) {
+//     return this.pizzas.includes(pizzaName);
+//   },
+//   order(pizzaName) {
+//     const isPizzaAvailable = this.checkPizza(pizzaName);
+
+//     if (!isPizzaAvailable) {
+//       return `Sorry, there is no pizza named «${pizzaName}»`;
+//     }
+
+//     return `Order accepted, preparing «${pizzaName}» pizza`;
+//   },
+// };
+
+// const customer = {
+//   username: "Mango",
+//   balance: 24000,
+//   discount: 0.1,
+//   orders: ["Burger", "Pizza", "Salad"],
+//   // Change code below this line
+//   getBalance() {
+//     return this.balance;
+//   },
+//   getDiscount() {
+//     return this.discount;
+//   },
+//   setDiscount(value) {
+//     this.discount = value;
+//   },
+//   getOrders() {
+//     return this.orders;
+//   },
+//   addOrder(cost, order) {
+//     this.balance -= cost - cost * this.discount;
+//     this.orders.push(order);
+//   },
+// };
+// customer.setDiscount(0.15);
+// console.log(customer.getDiscount()); // 0.15
+// customer.addOrder(5000, "Steak");
+// console.log(customer.getBalance()); // 19750
+// console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+
+// const historyService = {
+//   orders: [
+//     { email: "jacob@hotmail.com", dish: "Burrito" },
+//     { email: "solomon@topmail.net", dish: "Burger" },
+//     { email: "artemis@coldmail.net", dish: "Pizza" },
+//     { email: "solomon@topmail.net", dish: "Apple pie" },
+//     { email: "jacob@hotmail.com", dish: "Taco" },
+//   ],
+//   getOrdersLog() {
+//     return this.orders
+//       .map(order => `email: ${order.email} dish: ${order.dish}`)
+//       .join(" - ");
+//   },
+//   getEmails() {
+//     const emails = this.orders.map(order => order.email);
+//     const uniqueEmails = new Set(emails);
+//     return [...uniqueEmails];
+//   },
+//   getOrdersByEmail(email) {
+//     return this.orders.filter(order => order.email === email);
+//   },
+// };
+
